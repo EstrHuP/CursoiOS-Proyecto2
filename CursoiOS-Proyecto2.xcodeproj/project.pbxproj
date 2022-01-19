@@ -13,6 +13,9 @@
 		C7220EFE279874D000EFD05C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7220EFC279874D000EFD05C /* DetailViewController.swift */; };
 		C7220EFF279874D000EFD05C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7220EFD279874D000EFD05C /* DetailViewController.xib */; };
 		C7220F01279875F600EFD05C /* DetailControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7220F00279875F600EFD05C /* DetailControllerBuilder.swift */; };
+		C7220F0427988B0900EFD05C /* CollectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7220F0327988B0900EFD05C /* CollectionViewController.storyboard */; };
+		C7220F0627988B1700EFD05C /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7220F0527988B1700EFD05C /* CollectionViewController.swift */; };
+		C7220F0827988B8C00EFD05C /* CollectionControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7220F0727988B8C00EFD05C /* CollectionControllerBuilder.swift */; };
 		D786BCEC2798278F004619AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BCEB2798278F004619AD /* AppDelegate.swift */; };
 		D786BCEE2798278F004619AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BCED2798278F004619AD /* SceneDelegate.swift */; };
 		D786BCF527982793004619AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D786BCF427982793004619AD /* Assets.xcassets */; };
@@ -51,6 +54,9 @@
 		C7220EFC279874D000EFD05C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C7220EFD279874D000EFD05C /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		C7220F00279875F600EFD05C /* DetailControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailControllerBuilder.swift; sourceTree = "<group>"; };
+		C7220F0327988B0900EFD05C /* CollectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CollectionViewController.storyboard; sourceTree = "<group>"; };
+		C7220F0527988B1700EFD05C /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		C7220F0727988B8C00EFD05C /* CollectionControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionControllerBuilder.swift; sourceTree = "<group>"; };
 		D786BCE82798278F004619AD /* CursoiOS-Proyecto2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CursoiOS-Proyecto2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D786BCEB2798278F004619AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D786BCED2798278F004619AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +120,16 @@
 			path = DetailController;
 			sourceTree = "<group>";
 		};
+		C7220F0227988AFA00EFD05C /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				C7220F0327988B0900EFD05C /* CollectionViewController.storyboard */,
+				C7220F0527988B1700EFD05C /* CollectionViewController.swift */,
+				C7220F0727988B8C00EFD05C /* CollectionControllerBuilder.swift */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
 		D786BCDF2798278F004619AD = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +187,7 @@
 		D786BD1B2798285A004619AD /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				C7220F0227988AFA00EFD05C /* Collection */,
 				C7220EF72798748100EFD05C /* DetailController */,
 				C7220EF02798640D00EFD05C /* ListController */,
 				D786BD2B27982D07004619AD /* InitialControllerBuilder.swift */,
@@ -309,6 +326,7 @@
 				D786BCF827982793004619AD /* LaunchScreen.storyboard in Resources */,
 				D786BCF527982793004619AD /* Assets.xcassets in Resources */,
 				C7220EFF279874D000EFD05C /* DetailViewController.xib in Resources */,
+				C7220F0427988B0900EFD05C /* CollectionViewController.storyboard in Resources */,
 				D786BD2927982B7E004619AD /* landmarkData.json in Resources */,
 				C7220EF22798643800EFD05C /* ListViewController.storyboard in Resources */,
 			);
@@ -339,6 +357,8 @@
 				D786BCEC2798278F004619AD /* AppDelegate.swift in Sources */,
 				C7220EF6279869F800EFD05C /* ListControllerBuilder.swift in Sources */,
 				C7220EF4279864C500EFD05C /* ListViewController.swift in Sources */,
+				C7220F0627988B1700EFD05C /* CollectionViewController.swift in Sources */,
+				C7220F0827988B8C00EFD05C /* CollectionControllerBuilder.swift in Sources */,
 				D786BCEE2798278F004619AD /* SceneDelegate.swift in Sources */,
 				D786BD2127982A45004619AD /* FetchLandmarksUseCase.swift in Sources */,
 				D786BD2427982A72004619AD /* Landmark.swift in Sources */,
