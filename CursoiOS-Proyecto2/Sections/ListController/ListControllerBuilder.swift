@@ -14,8 +14,7 @@ class ListControllerBuilder {
         let viewController = ListViewController.createFromStoryboard()
         //caso de uso. Inyección de dependencias
         viewController.fetchLandmarks = FetchLandmarksFromDisk()
-        //presenter
-        //viper...
+        viewController.detailBuilder = DetailControllerBuilder()
         return viewController
     }
 }

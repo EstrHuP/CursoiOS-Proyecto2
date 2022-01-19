@@ -12,6 +12,7 @@ class ListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var fetchLandmarks: FetchLandmarksUseCase?
+    var detailBuilder: DetailControllerBuilder?
     
     static func createFromStoryboard() -> ListViewController {
         return UIStoryboard(name: "ListViewController", bundle: .main).instantiateViewController(withIdentifier: "ListViewController") as! ListViewController
@@ -20,6 +21,7 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
         fetchData()
     }
     
@@ -40,6 +42,21 @@ class ListViewController: UIViewController {
             case .failure: break
             }
         })
+    }
+}
+
+extension ListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = landmarks[indexPath.row]
+        guard let detail = detailBuilder?.build(viewModel: model.toDetailViewModel) else {
+            return
+        }
+        navigationController?.pushViewController(detail, animated: true)
+        
+        //MARK: Navigation without builder
+//        let landmark = landmarks[indexPath.row]
+//        let viewController = DetailControllerBuilder().build(viewModel: landmark.toDetailViewModel)
+//        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
