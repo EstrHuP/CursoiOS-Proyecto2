@@ -10,9 +10,8 @@ import UIKit
 
 class InitialControllerBuilder {
     func build() -> UIViewController {
-        let mockController = UIViewController()
-        mockController.view.backgroundColor = .blue
-        let navigationController = UINavigationController(rootViewController: mockController)
+        let viewController = ListControllerBuilder().build()
+        let navigationController = UINavigationController(rootViewController: viewController)
         
         return navigationController
     }
