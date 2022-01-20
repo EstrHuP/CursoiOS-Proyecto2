@@ -6,18 +6,31 @@
 //
 
 import UIKit
+import Kingfisher
+
+struct ListTableCellViewModel {
+    let imageUrl: URL?
+    let text: String
+}
 
 class ListTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var catImage: UIImageView!
+    @IBOutlet weak var favButton: UIButton!
+    
+    @IBAction func favoritePressed(_ sender: Any) {
+        
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func configure(viewModel: ListTableCellViewModel) {
+        nameLabel.text = viewModel.text
+        catImage.kf.indicatorType = .activity
+        catImage.kf.setImage(with: viewModel.imageUrl)
     }
-
 }
