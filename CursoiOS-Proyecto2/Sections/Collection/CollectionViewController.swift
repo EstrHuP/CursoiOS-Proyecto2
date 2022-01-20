@@ -12,6 +12,7 @@ class CollectionViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var fetchLandmarks: FetchLandmarksUseCase?
+    var detailBuilder: DetailControllerBuilder?
     
     private var landmarks = [Landmark]() {
         didSet {
@@ -22,6 +23,7 @@ class CollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
+        collectionView.delegate = self
         fetchDataCollection()
     }
     
@@ -64,6 +66,15 @@ extension CollectionViewController {
     }
 }
 
+extension CollectionViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let model = landmarks[indexPath.row]
+        guard let detail = detailBuilder?.build(viewModel: model.toDetailViewModel) else {
+            return
+        }
+        navigationController?.pushViewController(detail, animated: true)
+    }
+}
 extension CollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return landmarks.count

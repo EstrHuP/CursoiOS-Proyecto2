@@ -28,13 +28,14 @@ class CollectionViewCell: UICollectionViewCell {
     
     private func cardDesign() {
         contentView.layer.cornerRadius = 10
-        contentView.layer.masksToBounds = true //
+        contentView.layer.masksToBounds = true
         
-        layer.shadowColor = UIColor.gray.cgColor
+        layer.shadowColor = UIColor.lightGray.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 2.0)
         layer.shadowRadius = 2.0
-        layer.shadowOpacity = 1.0
+        layer.shadowOpacity = 0.5
         layer.masksToBounds = false
         layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: contentView.layer.cornerRadius).cgPath
+        clipsToBounds = true
     }
 }
