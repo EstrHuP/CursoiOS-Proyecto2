@@ -26,6 +26,8 @@ class ListViewController: UIViewController {
         fetchData()
     }
     
+    private var favorites = [String]()
+    
     private var cats = [Cat]() {
         didSet {
             DispatchQueue.main.async {
@@ -65,8 +67,26 @@ extension ListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListTableViewCell", for: indexPath) as! ListTableViewCell
         let cat = cats[indexPath.row]
         
+        cell.delegate = self
+        cell.isFavorite = favorites.contains(cat.id)
         cell.configure(viewModel: cat.toListCellViewModel)
         
         return cell
+    }
+}
+
+extension ListViewController: ListTableViewDelegate {
+    func didPressInFavorite(cell: ListTableViewCell) {
+        guard let indexPath = tableView.indexPath(for: cell) else { return }
+        
+        cell.isFavorite = !cell.isFavorite
+        
+        let cat = cats[indexPath.row]
+        
+        if cell.isFavorite {
+            favorites.append(cat.id)
+        } else if let index = favorites.firstIndex(of: cat.id){
+            favorites.remove(at: index)
+        }
     }
 }

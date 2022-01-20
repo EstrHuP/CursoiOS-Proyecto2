@@ -13,13 +13,29 @@ struct ListTableCellViewModel {
     let text: String
 }
 
+protocol ListTableViewDelegate: AnyObject {
+    func didPressInFavorite(cell: ListTableViewCell)
+}
+
 class ListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var catImage: UIImageView!
     @IBOutlet weak var favButton: UIButton!
     
+    weak var delegate: ListTableViewDelegate?
+    
+    var isFavorite = false {
+        didSet {
+            isFavorite ? favButton.setImage(UIImage(systemName: "heart.fill"), for: .normal) : favButton.setImage(UIImage(systemName: "heart"), for: .normal)
+        }
+    }
+    
     @IBAction func favoritePressed(_ sender: Any) {
+        delegate?.didPressInFavorite(cell: self)
+    }
+    
+    override func prepareForReuse() {
         
     }
     
