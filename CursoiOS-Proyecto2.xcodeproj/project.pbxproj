@@ -16,6 +16,7 @@
 		C7220F0427988B0900EFD05C /* CollectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7220F0327988B0900EFD05C /* CollectionViewController.storyboard */; };
 		C7220F0627988B1700EFD05C /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7220F0527988B1700EFD05C /* CollectionViewController.swift */; };
 		C7220F0827988B8C00EFD05C /* CollectionControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7220F0727988B8C00EFD05C /* CollectionControllerBuilder.swift */; };
+		C751FC032799802C007FD77F /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C751FC022799802C007FD77F /* CollectionViewCell.swift */; };
 		D786BCEC2798278F004619AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BCEB2798278F004619AD /* AppDelegate.swift */; };
 		D786BCEE2798278F004619AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BCED2798278F004619AD /* SceneDelegate.swift */; };
 		D786BCF527982793004619AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D786BCF427982793004619AD /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		C7220F0327988B0900EFD05C /* CollectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CollectionViewController.storyboard; sourceTree = "<group>"; };
 		C7220F0527988B1700EFD05C /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		C7220F0727988B8C00EFD05C /* CollectionControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionControllerBuilder.swift; sourceTree = "<group>"; };
+		C751FC022799802C007FD77F /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		D786BCE82798278F004619AD /* CursoiOS-Proyecto2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CursoiOS-Proyecto2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D786BCEB2798278F004619AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D786BCED2798278F004619AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,8 +115,8 @@
 		C7220EF72798748100EFD05C /* DetailController */ = {
 			isa = PBXGroup;
 			children = (
-				C7220EFC279874D000EFD05C /* DetailViewController.swift */,
 				C7220EFD279874D000EFD05C /* DetailViewController.xib */,
+				C7220EFC279874D000EFD05C /* DetailViewController.swift */,
 				C7220F00279875F600EFD05C /* DetailControllerBuilder.swift */,
 			);
 			path = DetailController;
@@ -126,6 +128,7 @@
 				C7220F0327988B0900EFD05C /* CollectionViewController.storyboard */,
 				C7220F0527988B1700EFD05C /* CollectionViewController.swift */,
 				C7220F0727988B8C00EFD05C /* CollectionControllerBuilder.swift */,
+				C751FC022799802C007FD77F /* CollectionViewCell.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 			files = (
 				D786BD2C27982D07004619AD /* InitialControllerBuilder.swift in Sources */,
 				D786BCEC2798278F004619AD /* AppDelegate.swift in Sources */,
+				C751FC032799802C007FD77F /* CollectionViewCell.swift in Sources */,
 				C7220EF6279869F800EFD05C /* ListControllerBuilder.swift in Sources */,
 				C7220EF4279864C500EFD05C /* ListViewController.swift in Sources */,
 				C7220F0627988B1700EFD05C /* CollectionViewController.swift in Sources */,

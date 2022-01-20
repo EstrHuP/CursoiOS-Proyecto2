@@ -28,7 +28,7 @@ private extension InitialControllerBuilder {
     
     func buildCollection() -> UINavigationController {
         let collectionController = CollectionControllerBuilder().build()
-        let collectionNavigation = UITabBarItem(title: "Collection", image: .init(systemName: "list.bullet"), tag: 1)
+        let collectionNavigation = UITabBarItem(title: "Collection", image: .init(systemName: "calendar"), tag: 1)
         
         return buildNavigation(with: collectionController, tabBarItem: collectionNavigation)
     }
