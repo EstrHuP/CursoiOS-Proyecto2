@@ -65,6 +65,12 @@ extension ListViewController: UITableViewDataSource {
         let cat = cats[indexPath.row]
         
         cell.textLabel?.text = cat.tagsText
+        
+        //Forma "sucia" de pintar imagenes desde internet
+        if let url = cat.imageUrl, let data = try? Data(contentsOf: url) {
+            cell.imageView?.image = UIImage(data: data)
+        }
+        
         return cell
     }
 }

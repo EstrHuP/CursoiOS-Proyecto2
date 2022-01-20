@@ -19,4 +19,8 @@ extension Cat {
     var tagsText: String {
         return tags.joined(separator: " ,")
     }
+    
+    var imageUrl: URL? {
+        return URL(string: "https://cataas.com/cat/\(id)")
+    }
 }
