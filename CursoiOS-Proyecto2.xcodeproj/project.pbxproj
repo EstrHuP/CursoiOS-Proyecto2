@@ -20,6 +20,7 @@
 		C751FC032799802C007FD77F /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C751FC022799802C007FD77F /* CollectionViewCell.swift */; };
 		C775713E2799B339000C095D /* FetchCatsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C775713D2799B339000C095D /* FetchCatsUseCase.swift */; };
 		C77571402799B473000C095D /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C775713F2799B473000C095D /* Cat.swift */; };
+		C777DEB02799D6EF000F61D6 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C777DEAF2799D6EF000F61D6 /* ListTableViewCell.swift */; };
 		D781F7BDA426CC30591BE05E /* Pods_CursoiOS_Proyecto2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468780747D80382A4CB6030A /* Pods_CursoiOS_Proyecto2.framework */; };
 		D786BCEC2798278F004619AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BCEB2798278F004619AD /* AppDelegate.swift */; };
 		D786BCEE2798278F004619AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BCED2798278F004619AD /* SceneDelegate.swift */; };
@@ -73,6 +74,7 @@
 		C751FC022799802C007FD77F /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		C775713D2799B339000C095D /* FetchCatsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCatsUseCase.swift; sourceTree = "<group>"; };
 		C775713F2799B473000C095D /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		C777DEAF2799D6EF000F61D6 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		C79A40F49E1EA3CB3D413E16 /* Pods-CursoiOS-Proyecto2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CursoiOS-Proyecto2.debug.xcconfig"; path = "Target Support Files/Pods-CursoiOS-Proyecto2/Pods-CursoiOS-Proyecto2.debug.xcconfig"; sourceTree = "<group>"; };
 		D786BCE82798278F004619AD /* CursoiOS-Proyecto2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CursoiOS-Proyecto2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D786BCEB2798278F004619AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				C7220EF12798643800EFD05C /* ListViewController.storyboard */,
 				C7220EF3279864C500EFD05C /* ListViewController.swift */,
 				C7220EF5279869F800EFD05C /* ListControllerBuilder.swift */,
+				C777DEAF2799D6EF000F61D6 /* ListTableViewCell.swift */,
 			);
 			path = ListController;
 			sourceTree = "<group>";
@@ -265,7 +268,6 @@
 				1438ABC917E054620A0AF443 /* Pods-CursoiOS-Proyecto2Tests.debug.xcconfig */,
 				B67928FE3218011D3AE871BD /* Pods-CursoiOS-Proyecto2Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -525,6 +527,7 @@
 				D786BD2427982A72004619AD /* Landmark.swift in Sources */,
 				C7220EFE279874D000EFD05C /* DetailViewController.swift in Sources */,
 				C7220F01279875F600EFD05C /* DetailControllerBuilder.swift in Sources */,
+				C777DEB02799D6EF000F61D6 /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
