@@ -11,6 +11,8 @@ import Alamofire
 class CatsListInteractor: ListInteractorContract {
     var output: ListInteractorOutputContract?
     
+    private var favorites = [String]()
+    
     func fetchItems() {
         guard let url = URL(string: "https://cataas.com/api/cats") else {
             output?.fetchDidFail()
@@ -26,5 +28,19 @@ class CatsListInteractor: ListInteractorContract {
             case .failure: self.output?.fetchDidFail()
             }
         }.validate()
+    }
+    
+    func didPressFavorite(in cat: Cat) {
+        if !favorites.contains(cat.id) {
+            favorites.append(cat.id)
+            output?.didUpdateFavorites(in: cat, favorite: true)
+        } else if let index = favorites.firstIndex(of: cat.id) {
+            favorites.remove(at: index)
+            output?.didUpdateFavorites(in: cat, favorite: false)
+        }
+    }
+    
+    func isFavorite(cat: Cat) -> Bool {
+        return favorites.contains(cat.id)
     }
 }

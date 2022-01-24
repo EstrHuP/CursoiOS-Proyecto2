@@ -33,11 +33,14 @@ protocol ListPresenterContract: AnyObject { //presenter hacia la vista
 protocol ListInteractorContract {
     var output: ListInteractorOutputContract? {get set}
     func fetchItems()
+    func didPressFavorite(in cat: Cat)
+    func isFavorite(cat: Cat) -> Bool
 }
 
 protocol ListInteractorOutputContract {
     func didFetch(cats: [Cat])
     func fetchDidFail()
+    func didUpdateFavorites(in cat: Cat, favorite: Bool)
 }
 
 //SOLO SE USA WIREFRAME/ROUTER EN EL CASO DE QUE SE VAYA A NAVEGAR A OTRA PANTALLA

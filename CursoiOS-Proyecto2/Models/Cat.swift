@@ -9,7 +9,7 @@ import Foundation
 
 //Codable -> para escribir en disco
 //Decodable -> descrifrar json
-struct Cat: Decodable {
+struct Cat: Decodable, Equatable {
     let id: String
     let created_at: String
     let tags: [String]
