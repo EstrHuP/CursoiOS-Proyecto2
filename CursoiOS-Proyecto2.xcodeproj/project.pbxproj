@@ -21,6 +21,8 @@
 		C7587268279EF976006C0A64 /* Pokemons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7587267279EF976006C0A64 /* Pokemons.swift */; };
 		C758726A279F035B006C0A64 /* ListViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7587269279F035B006C0A64 /* ListViewContract.swift */; };
 		C758726C279F049E006C0A64 /* CatsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C758726B279F049E006C0A64 /* CatsListPresenter.swift */; };
+		C758726E279F1D99006C0A64 /* CatsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C758726D279F1D99006C0A64 /* CatsListInteractor.swift */; };
+		C7587274279F215C006C0A64 /* CatsListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7587273279F215C006C0A64 /* CatsListWireframe.swift */; };
 		C775713E2799B339000C095D /* FetchCatsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C775713D2799B339000C095D /* FetchCatsUseCase.swift */; };
 		C77571402799B473000C095D /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C775713F2799B473000C095D /* Cat.swift */; };
 		C777DEB02799D6EF000F61D6 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C777DEAF2799D6EF000F61D6 /* ListTableViewCell.swift */; };
@@ -78,6 +80,8 @@
 		C7587267279EF976006C0A64 /* Pokemons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemons.swift; sourceTree = "<group>"; };
 		C7587269279F035B006C0A64 /* ListViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewContract.swift; sourceTree = "<group>"; };
 		C758726B279F049E006C0A64 /* CatsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsListPresenter.swift; sourceTree = "<group>"; };
+		C758726D279F1D99006C0A64 /* CatsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsListInteractor.swift; sourceTree = "<group>"; };
+		C7587273279F215C006C0A64 /* CatsListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsListWireframe.swift; sourceTree = "<group>"; };
 		C775713D2799B339000C095D /* FetchCatsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCatsUseCase.swift; sourceTree = "<group>"; };
 		C775713F2799B473000C095D /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		C777DEAF2799D6EF000F61D6 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
@@ -142,12 +146,12 @@
 		C7220EF02798640D00EFD05C /* ListController */ = {
 			isa = PBXGroup;
 			children = (
-				C7220EF12798643800EFD05C /* ListViewController.storyboard */,
-				C7220EF3279864C500EFD05C /* ListViewController.swift */,
+				C7587272279F1FF8006C0A64 /* Interactor */,
+				C7587271279F1FF3006C0A64 /* Presenter */,
+				C7587270279F1FE7006C0A64 /* Wireframe */,
+				C758726F279F1FCA006C0A64 /* UI */,
 				C7220EF5279869F800EFD05C /* ListControllerBuilder.swift */,
-				C777DEAF2799D6EF000F61D6 /* ListTableViewCell.swift */,
 				C7587269279F035B006C0A64 /* ListViewContract.swift */,
-				C758726B279F049E006C0A64 /* CatsListPresenter.swift */,
 			);
 			path = ListController;
 			sourceTree = "<group>";
@@ -171,6 +175,40 @@
 				C751FC022799802C007FD77F /* CollectionViewCell.swift */,
 			);
 			path = Collection;
+			sourceTree = "<group>";
+		};
+		C758726F279F1FCA006C0A64 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C7220EF12798643800EFD05C /* ListViewController.storyboard */,
+				C7220EF3279864C500EFD05C /* ListViewController.swift */,
+				C777DEAF2799D6EF000F61D6 /* ListTableViewCell.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C7587270279F1FE7006C0A64 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				C7587273279F215C006C0A64 /* CatsListWireframe.swift */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		C7587271279F1FF3006C0A64 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C758726B279F049E006C0A64 /* CatsListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C7587272279F1FF8006C0A64 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C758726D279F1D99006C0A64 /* CatsListInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		D786BCDF2798278F004619AD = {
@@ -524,6 +562,7 @@
 			files = (
 				D786BD2C27982D07004619AD /* InitialControllerBuilder.swift in Sources */,
 				D786BCEC2798278F004619AD /* AppDelegate.swift in Sources */,
+				C758726E279F1D99006C0A64 /* CatsListInteractor.swift in Sources */,
 				C775713E2799B339000C095D /* FetchCatsUseCase.swift in Sources */,
 				C751FC032799802C007FD77F /* CollectionViewCell.swift in Sources */,
 				C7220EF6279869F800EFD05C /* ListControllerBuilder.swift in Sources */,
@@ -540,6 +579,7 @@
 				C758726C279F049E006C0A64 /* CatsListPresenter.swift in Sources */,
 				C7220F01279875F600EFD05C /* DetailControllerBuilder.swift in Sources */,
 				C777DEB02799D6EF000F61D6 /* ListTableViewCell.swift in Sources */,
+				C7587274279F215C006C0A64 /* CatsListWireframe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

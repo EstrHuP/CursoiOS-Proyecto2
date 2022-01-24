@@ -17,6 +17,8 @@ protocol ListViewContract: UIViewController { //vista hacia el presenter
 
 protocol ListPresenterContract: AnyObject { //presenter hacia la vista
     var view: ListViewContract? {get set}
+    var interactor: ListInteractorContract? {get set}
+    var wireframe: CatListWireframeContract? {get set}
     
     func viewDidLoad()
     
@@ -26,4 +28,20 @@ protocol ListPresenterContract: AnyObject { //presenter hacia la vista
     
     func didSelectFavorite(at indexPath: IndexPath)
     func didSelectItem(at indexPath: IndexPath)
+}
+
+protocol ListInteractorContract {
+    var output: ListInteractorOutputContract? {get set}
+    func fetchItems()
+}
+
+protocol ListInteractorOutputContract {
+    func didFetch(cats: [Cat])
+    func fetchDidFail()
+}
+
+//SOLO SE USA WIREFRAME/ROUTER EN EL CASO DE QUE SE VAYA A NAVEGAR A OTRA PANTALLA
+protocol CatListWireframeContract {
+    var view: UIViewController? {get set}
+    func navigate(to cat: Cat)
 }

@@ -15,11 +15,14 @@ class ListControllerBuilder {
         
         //VIPER
         let presenter = CatsListPresenter()
-        let interactor = FetchCatsFromAPI()
+        let interactor = CatsListInteractor()
+        let wireframe = CatsListWireframe()
         
         viewController.presenter = presenter
         presenter.view = viewController
-        presenter.fetchCats = interactor
+        presenter.interactor = interactor
+        presenter.wireframe = wireframe
+        wireframe.view = viewController
         
         return viewController
     }

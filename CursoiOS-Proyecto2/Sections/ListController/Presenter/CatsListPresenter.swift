@@ -8,8 +8,10 @@
 import Foundation
 
 class CatsListPresenter: ListPresenterContract {
-    var fetchCats: FetchCatsUseCase?
+    
     var view: ListViewContract?
+    var interactor: ListInteractorContract?
+    var wireframe: CatListWireframeContract?
     
     private var cats = [Cat]() {
         didSet {
@@ -24,7 +26,8 @@ class CatsListPresenter: ListPresenterContract {
     }
     
     func viewDidLoad() {
-        fetchData()
+        interactor?.output = self
+        interactor?.fetchItems()
     }
     
     func cellViewModel(at indexPath: IndexPath) -> ListTableCellViewModel {
@@ -50,14 +53,21 @@ class CatsListPresenter: ListPresenterContract {
     }
     
     func didSelectItem(at indexPath: IndexPath) {
-        let item = cats[indexPath.row]
-        let detail = DetailControllerBuilder().build(viewModel: DetailViewModel.init(name: item.tagsText, image: item.imageUrl))
-        view?.navigationController?.pushViewController(detail, animated: true)
+        let cat = cats[indexPath.row]
+        wireframe?.navigate(to: cat)
     }
     
     private func fetchData() {
-        fetchCats?.fetchCats(completion: { cats in
-            self.cats = cats
-        })
+        interactor?.fetchItems()
+    }
+}
+
+extension CatsListPresenter: ListInteractorOutputContract {
+    func didFetch(cats: [Cat]) {
+        self.cats = cats
+    }
+    
+    func fetchDidFail() {
+        print("Error")
     }
 }
