@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import Kingfisher
 
 struct DetailViewModel {
     let name: String
-    let image: UIImage?
+    let image: URL?
 }
 class DetailViewController: UIViewController {
 
@@ -29,7 +30,7 @@ class DetailViewController: UIViewController {
     
     func configure(with viewModel: DetailViewModel?) {
         guard let model = viewModel else { return }
-        detailImage.image = model.image
+        detailImage.kf.setImage(with: viewModel?.image)
         nameLabel.text = model.name
     }
 }

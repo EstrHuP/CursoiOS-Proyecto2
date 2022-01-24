@@ -39,7 +39,7 @@ extension Landmark {
     }
     
     var toDetailViewModel: DetailViewModel {
-        DetailViewModel(name: name, image: image)
+        DetailViewModel(name: name, image: nil)
     }
     
     var toCollectionCellViewModel: CollectionViewModel {

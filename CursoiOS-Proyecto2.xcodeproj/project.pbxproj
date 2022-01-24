@@ -18,6 +18,9 @@
 		C7220F0627988B1700EFD05C /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7220F0527988B1700EFD05C /* CollectionViewController.swift */; };
 		C7220F0827988B8C00EFD05C /* CollectionControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7220F0727988B8C00EFD05C /* CollectionControllerBuilder.swift */; };
 		C751FC032799802C007FD77F /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C751FC022799802C007FD77F /* CollectionViewCell.swift */; };
+		C7587268279EF976006C0A64 /* Pokemons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7587267279EF976006C0A64 /* Pokemons.swift */; };
+		C758726A279F035B006C0A64 /* ListViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7587269279F035B006C0A64 /* ListViewContract.swift */; };
+		C758726C279F049E006C0A64 /* CatsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C758726B279F049E006C0A64 /* CatsListPresenter.swift */; };
 		C775713E2799B339000C095D /* FetchCatsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C775713D2799B339000C095D /* FetchCatsUseCase.swift */; };
 		C77571402799B473000C095D /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C775713F2799B473000C095D /* Cat.swift */; };
 		C777DEB02799D6EF000F61D6 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C777DEAF2799D6EF000F61D6 /* ListTableViewCell.swift */; };
@@ -72,6 +75,9 @@
 		C7220F0527988B1700EFD05C /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		C7220F0727988B8C00EFD05C /* CollectionControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionControllerBuilder.swift; sourceTree = "<group>"; };
 		C751FC022799802C007FD77F /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		C7587267279EF976006C0A64 /* Pokemons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemons.swift; sourceTree = "<group>"; };
+		C7587269279F035B006C0A64 /* ListViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewContract.swift; sourceTree = "<group>"; };
+		C758726B279F049E006C0A64 /* CatsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsListPresenter.swift; sourceTree = "<group>"; };
 		C775713D2799B339000C095D /* FetchCatsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCatsUseCase.swift; sourceTree = "<group>"; };
 		C775713F2799B473000C095D /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		C777DEAF2799D6EF000F61D6 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
@@ -140,6 +146,8 @@
 				C7220EF3279864C500EFD05C /* ListViewController.swift */,
 				C7220EF5279869F800EFD05C /* ListControllerBuilder.swift */,
 				C777DEAF2799D6EF000F61D6 /* ListTableViewCell.swift */,
+				C7587269279F035B006C0A64 /* ListViewContract.swift */,
+				C758726B279F049E006C0A64 /* CatsListPresenter.swift */,
 			);
 			path = ListController;
 			sourceTree = "<group>";
@@ -246,6 +254,7 @@
 			children = (
 				D786BD2327982A72004619AD /* Landmark.swift */,
 				C775713F2799B473000C095D /* Cat.swift */,
+				C7587267279EF976006C0A64 /* Pokemons.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -518,14 +527,17 @@
 				C775713E2799B339000C095D /* FetchCatsUseCase.swift in Sources */,
 				C751FC032799802C007FD77F /* CollectionViewCell.swift in Sources */,
 				C7220EF6279869F800EFD05C /* ListControllerBuilder.swift in Sources */,
+				C7587268279EF976006C0A64 /* Pokemons.swift in Sources */,
 				C7220EF4279864C500EFD05C /* ListViewController.swift in Sources */,
 				C7220F0627988B1700EFD05C /* CollectionViewController.swift in Sources */,
+				C758726A279F035B006C0A64 /* ListViewContract.swift in Sources */,
 				C7220F0827988B8C00EFD05C /* CollectionControllerBuilder.swift in Sources */,
 				C77571402799B473000C095D /* Cat.swift in Sources */,
 				D786BCEE2798278F004619AD /* SceneDelegate.swift in Sources */,
 				D786BD2127982A45004619AD /* FetchLandmarksUseCase.swift in Sources */,
 				D786BD2427982A72004619AD /* Landmark.swift in Sources */,
 				C7220EFE279874D000EFD05C /* DetailViewController.swift in Sources */,
+				C758726C279F049E006C0A64 /* CatsListPresenter.swift in Sources */,
 				C7220F01279875F600EFD05C /* DetailControllerBuilder.swift in Sources */,
 				C777DEB02799D6EF000F61D6 /* ListTableViewCell.swift in Sources */,
 			);

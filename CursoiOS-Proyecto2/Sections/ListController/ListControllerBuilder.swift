@@ -12,9 +12,15 @@ class ListControllerBuilder {
     
     func build() -> UIViewController {
         let viewController = ListViewController.createFromStoryboard()
-        //caso de uso. Inyección de dependencias
-        viewController.fetchCats = FetchCatsFromAPI()
-        viewController.detailBuilder = DetailControllerBuilder()
+        
+        //VIPER
+        let presenter = CatsListPresenter()
+        let interactor = FetchCatsFromAPI()
+        
+        viewController.presenter = presenter
+        presenter.view = viewController
+        presenter.fetchCats = interactor
+        
         return viewController
     }
 }

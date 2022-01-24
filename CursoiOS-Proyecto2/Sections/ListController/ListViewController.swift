@@ -8,12 +8,13 @@
 import UIKit
 import Kingfisher
 
-class ListViewController: UIViewController {
+class ListViewController: UIViewController, ListViewContract {
 
+    //VIPER
+    var presenter: ListPresenterContract?
+    
     @IBOutlet weak var tableView: UITableView!
     
-    var fetchCats: FetchCatsUseCase?
-    var detailBuilder: DetailControllerBuilder?
     
     static func createFromStoryboard() -> ListViewController {
         return UIStoryboard(name: "ListViewController", bundle: .main).instantiateViewController(withIdentifier: "ListViewController") as! ListViewController
@@ -23,53 +24,44 @@ class ListViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        fetchData()
+        presenter?.viewDidLoad()
     }
     
     private var favorites = [String]()
     
-    private var cats = [Cat]() {
-        didSet {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
+    func reloadData() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
         }
     }
     
-    private func fetchData() {
-        fetchCats?.fetchCats(completion: { cats in
-            self.cats = cats
-        })
+    func setFavorite(_ favorite: Bool, at indexPath: IndexPath) {
+        DispatchQueue.main.async {
+            guard let cell = self.tableView.cellForRow(at: indexPath) as? ListTableViewCell else { return }
+            cell.isFavorite = favorite
+        }
     }
 }
 
 extension ListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let model = cats[indexPath.row]
-//        guard let detail = detailBuilder?.build(viewModel: model.toDetailViewModel) else {
-//            return
-//        }
-//        navigationController?.pushViewController(detail, animated: true)
-        
-        //MARK: Navigation without builder
-//        let landmark = landmarks[indexPath.row]
-//        let viewController = DetailControllerBuilder().build(viewModel: landmark.toDetailViewModel)
-//        navigationController?.pushViewController(viewController, animated: true)
+        presenter?.didSelectItem(at: indexPath)
     }
 }
 
 extension ListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cats.count
+        return presenter?.numItems ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ListTableViewCell", for: indexPath) as! ListTableViewCell
-        let cat = cats[indexPath.row]
+        guard let viewModel = presenter?.cellViewModel(at: indexPath), let cell = tableView.dequeueReusableCell(withIdentifier: "ListTableViewCell", for: indexPath) as? ListTableViewCell else {
+            fatalError()
+        }
         
         cell.delegate = self
-        cell.isFavorite = favorites.contains(cat.id)
-        cell.configure(viewModel: cat.toListCellViewModel)
+        cell.isFavorite = presenter?.isFavorite(at: indexPath) ?? false
+        cell.configure(viewModel: viewModel)
         
         return cell
     }
@@ -78,15 +70,6 @@ extension ListViewController: UITableViewDataSource {
 extension ListViewController: ListTableViewDelegate {
     func didPressInFavorite(cell: ListTableViewCell) {
         guard let indexPath = tableView.indexPath(for: cell) else { return }
-        
-        cell.isFavorite = !cell.isFavorite
-        
-        let cat = cats[indexPath.row]
-        
-        if cell.isFavorite {
-            favorites.append(cat.id)
-        } else if let index = favorites.firstIndex(of: cat.id){
-            favorites.remove(at: index)
-        }
+        presenter?.didSelectFavorite(at: indexPath)
     }
 }
