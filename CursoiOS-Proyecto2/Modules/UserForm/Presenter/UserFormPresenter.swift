@@ -18,17 +18,21 @@ class UserFormPresenter: UserFormPresenterContract {
     
     func didUpdateName(_ name: String?) {
         userFormModel.name = name
+        view?.didValidateName(userFormModel.isValidName)
     }
     
     func didUpdateLastName(_ lasName: String?) {
-        userFormModel.lastName
+        userFormModel.lastName = lasName
+        view?.didValidateLastName(userFormModel.isValidLastName)
     }
     
     func didUpdatePhone(_ phone: String?) {
-        userFormModel.phone
+        userFormModel.phone = phone
+        view?.didValidatePhone(userFormModel.isValidPhone)
     }
     
     func didUpdateMail(_ mail: String?) {
-        userFormModel.mail
+        userFormModel.mail = mail
+        view?.didValidateMail(userFormModel.isValidMail)
     }
 }

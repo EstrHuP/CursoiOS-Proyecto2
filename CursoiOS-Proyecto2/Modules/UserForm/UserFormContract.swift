@@ -10,6 +10,11 @@ import UIKit
 
 protocol UserFormViewContract: UIViewController {
     var presenter: UserFormPresenterContract? {get set}
+    
+    func didValidateName(_ valid: Bool)
+    func didValidateLastName(_ valid: Bool)
+    func didValidatePhone(_ valid: Bool)
+    func didValidateMail(_ valid: Bool)
 }
 
 protocol UserFormPresenterContract {

@@ -31,7 +31,28 @@ class UserFormViewController: UIViewController, UserFormViewContract {
     static func createFromStoryboard() -> UserFormViewController {
         return UIStoryboard(name: "UserFormViewController", bundle: .main).instantiateViewController(withIdentifier: "UserFormViewController") as! UserFormViewController
     }
-
+    
+    func didValidateName(_ valid: Bool) {
+        didUpdateValidation(input: nameInput, valid: valid)
+    }
+    
+    func didValidateLastName(_ valid: Bool) {
+        didUpdateValidation(input: lastNameInput, valid: valid)
+    }
+    
+    func didValidatePhone(_ valid: Bool) {
+        didUpdateValidation(input: phoneInput, valid: valid)
+    }
+    
+    func didValidateMail(_ valid: Bool) {
+        didUpdateValidation(input: mailInput, valid: valid)
+    }
+    
+    private func didUpdateValidation(input: UITextField, valid: Bool) {
+        DispatchQueue.main.async {
+            input.backgroundColor = valid ? .systemBackground : .systemRed
+        }
+    }
 }
 
 extension UserFormViewController: UITextFieldDelegate {
