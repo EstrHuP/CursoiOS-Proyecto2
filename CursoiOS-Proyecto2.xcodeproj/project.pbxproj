@@ -26,6 +26,7 @@
 		C775713E2799B339000C095D /* FetchCatsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C775713D2799B339000C095D /* FetchCatsUseCase.swift */; };
 		C77571402799B473000C095D /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C775713F2799B473000C095D /* Cat.swift */; };
 		C777DEB02799D6EF000F61D6 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C777DEAF2799D6EF000F61D6 /* ListTableViewCell.swift */; };
+		C7B39D2C27A04ADB0050786A /* CatsListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B39D2B27A04ADB0050786A /* CatsListProvider.swift */; };
 		D781F7BDA426CC30591BE05E /* Pods_CursoiOS_Proyecto2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468780747D80382A4CB6030A /* Pods_CursoiOS_Proyecto2.framework */; };
 		D786BCEC2798278F004619AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BCEB2798278F004619AD /* AppDelegate.swift */; };
 		D786BCEE2798278F004619AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786BCED2798278F004619AD /* SceneDelegate.swift */; };
@@ -86,6 +87,7 @@
 		C775713F2799B473000C095D /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		C777DEAF2799D6EF000F61D6 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		C79A40F49E1EA3CB3D413E16 /* Pods-CursoiOS-Proyecto2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CursoiOS-Proyecto2.debug.xcconfig"; path = "Target Support Files/Pods-CursoiOS-Proyecto2/Pods-CursoiOS-Proyecto2.debug.xcconfig"; sourceTree = "<group>"; };
+		C7B39D2B27A04ADB0050786A /* CatsListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsListProvider.swift; sourceTree = "<group>"; };
 		D786BCE82798278F004619AD /* CursoiOS-Proyecto2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CursoiOS-Proyecto2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D786BCEB2798278F004619AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D786BCED2798278F004619AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -211,6 +213,14 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		C7B39D2A27A04ABF0050786A /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				C7B39D2B27A04ADB0050786A /* CatsListProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
 		D786BCDF2798278F004619AD = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +246,7 @@
 		D786BCEA2798278F004619AD /* CursoiOS-Proyecto2 */ = {
 			isa = PBXGroup;
 			children = (
+				C7B39D2A27A04ABF0050786A /* Providers */,
 				D786BD1B2798285A004619AD /* Sections */,
 				D786BD1F27982A32004619AD /* UseCases */,
 				D786BD2227982A65004619AD /* Models */,
@@ -576,6 +587,7 @@
 				D786BD2127982A45004619AD /* FetchLandmarksUseCase.swift in Sources */,
 				D786BD2427982A72004619AD /* Landmark.swift in Sources */,
 				C7220EFE279874D000EFD05C /* DetailViewController.swift in Sources */,
+				C7B39D2C27A04ADB0050786A /* CatsListProvider.swift in Sources */,
 				C758726C279F049E006C0A64 /* CatsListPresenter.swift in Sources */,
 				C7220F01279875F600EFD05C /* DetailControllerBuilder.swift in Sources */,
 				C777DEB02799D6EF000F61D6 /* ListTableViewCell.swift in Sources */,

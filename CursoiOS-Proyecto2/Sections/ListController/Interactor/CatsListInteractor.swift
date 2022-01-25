@@ -13,6 +13,7 @@ class CatsListInteractor: ListInteractorContract {
     private static var favoritesKey = "favorite.cats.array"
     
     var output: ListInteractorOutputContract?
+    var catsProvider: CatsListProviderContract?
     
     private let userDefaults: UserDefaults
     
@@ -33,20 +34,12 @@ class CatsListInteractor: ListInteractorContract {
     }
     
     func fetchItems() {
-        guard let url = URL(string: "https://cataas.com/api/cats") else {
-            output?.fetchDidFail()
-            return
-        }
-        
-        let request = URLRequest(url: url)
-        
-        //MARK: Alamofire
-        AF.request(request).responseDecodable { (response: DataResponse<[Cat], AFError>) in
-            switch response.result {
+        catsProvider?.getCatsList({ result in
+            switch result {
             case .success(let cats): self.output?.didFetch(cats: cats)
             case .failure: self.output?.fetchDidFail()
             }
-        }.validate()
+        })
     }
     
     func didPressFavorite(in cat: Cat) {

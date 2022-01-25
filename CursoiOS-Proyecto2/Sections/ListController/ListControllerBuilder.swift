@@ -16,6 +16,8 @@ class ListControllerBuilder {
         //VIPER
         let presenter = CatsListPresenter()
         let interactor = CatsListInteractor()
+        interactor.catsProvider = NetworkCatsListProvider()
+        
         let wireframe = CatsListWireframe()
         
         viewController.presenter = presenter

@@ -31,6 +31,7 @@ protocol ListPresenterContract: AnyObject { //presenter hacia la vista
 }
 
 protocol ListInteractorContract {
+    var catsProvider: CatsListProviderContract? {get set}
     var output: ListInteractorOutputContract? {get set}
     func fetchItems()
     func didPressFavorite(in cat: Cat)
