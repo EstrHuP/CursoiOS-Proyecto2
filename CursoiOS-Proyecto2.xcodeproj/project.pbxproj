@@ -247,7 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				C7B39D2A27A04ABF0050786A /* Providers */,
-				D786BD1B2798285A004619AD /* Sections */,
+				D786BD1B2798285A004619AD /* Modules */,
 				D786BD1F27982A32004619AD /* UseCases */,
 				D786BD2227982A65004619AD /* Models */,
 				D786BCEB2798278F004619AD /* AppDelegate.swift */,
@@ -278,7 +278,7 @@
 			path = "CursoiOS-Proyecto2UITests";
 			sourceTree = "<group>";
 		};
-		D786BD1B2798285A004619AD /* Sections */ = {
+		D786BD1B2798285A004619AD /* Modules */ = {
 			isa = PBXGroup;
 			children = (
 				C7220F0227988AFA00EFD05C /* Collection */,
@@ -286,7 +286,7 @@
 				C7220EF02798640D00EFD05C /* ListController */,
 				D786BD2B27982D07004619AD /* InitialControllerBuilder.swift */,
 			);
-			path = Sections;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		D786BD1F27982A32004619AD /* UseCases */ = {
