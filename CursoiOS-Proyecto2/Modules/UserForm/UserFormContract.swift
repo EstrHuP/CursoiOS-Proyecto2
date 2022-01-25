@@ -15,6 +15,8 @@ protocol UserFormViewContract: UIViewController {
     func didValidateLastName(_ valid: Bool)
     func didValidatePhone(_ valid: Bool)
     func didValidateMail(_ valid: Bool)
+    
+    func showValidationError()
 }
 
 protocol UserFormPresenterContract {
@@ -24,4 +26,7 @@ protocol UserFormPresenterContract {
     func didUpdateLastName(_ lasName: String?)
     func didUpdatePhone(_ phone: String?)
     func didUpdateMail(_ mail: String?)
+    func didUpdateBio(_ bio: String?)
+    
+    func didPressEnd()
 }

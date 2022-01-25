@@ -244,8 +244,8 @@
 		C7B39D2D27A053D60050786A /* UserForm */ = {
 			isa = PBXGroup;
 			children = (
-				C70E0BDF27A06C1F00778CCB /* Presenter */,
 				C7B39D2E27A053E00050786A /* UI */,
+				C70E0BDF27A06C1F00778CCB /* Presenter */,
 				C7B39D3327A054550050786A /* UserFormBuilder.swift */,
 				C70E0BDD27A0631500778CCB /* UserFormContract.swift */,
 			);

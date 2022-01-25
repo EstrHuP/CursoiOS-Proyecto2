@@ -13,6 +13,8 @@ class UserFormViewController: UIViewController, UserFormViewContract {
     @IBOutlet weak var lastNameInput: UITextField!
     @IBOutlet weak var phoneInput: UITextField!
     @IBOutlet weak var mailInput: UITextField!
+    @IBOutlet weak var userBioTextArea: UITextView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     var presenter: UserFormPresenterContract?
     
@@ -20,8 +22,13 @@ class UserFormViewController: UIViewController, UserFormViewContract {
         view.endEditing(true)
     }
     
+    @IBAction func sendPressed(_ sender: Any) {
+        presenter?.didPressEnd()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        userBioTextArea.delegate = self
         
         [nameInput, lastNameInput, phoneInput, mailInput].forEach { input in
             input?.delegate = self
@@ -52,6 +59,35 @@ class UserFormViewController: UIViewController, UserFormViewContract {
         DispatchQueue.main.async {
             input.backgroundColor = valid ? .systemBackground : .systemRed
         }
+    }
+    
+    func showValidationError() {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Error de validación", message: "Por favor, revisa los campos", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Aceptar", style: .default))
+            self.present(alert, animated: true)
+        }
+    }
+    
+    
+    func registerNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification){
+        guard let keyboardFrame = notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+        scrollView.contentInset.bottom = view.convert(keyboardFrame.cgRectValue, from: nil).size.height
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification){
+        scrollView.contentInset.bottom = 0
+    }
+}
+
+extension UserFormViewController: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        presenter?.didUpdateBio(textView.text)
     }
 }
 
