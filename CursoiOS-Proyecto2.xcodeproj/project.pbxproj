@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		12A4C4FFD132FAA646E335F4 /* Pods_CursoiOS_Proyecto2_CursoiOS_Proyecto2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BA01EFD8688A3BEE4C8AF99 /* Pods_CursoiOS_Proyecto2_CursoiOS_Proyecto2UITests.framework */; };
+		C70E0BDE27A0631500778CCB /* UserFormContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70E0BDD27A0631500778CCB /* UserFormContract.swift */; };
 		C7220EF22798643800EFD05C /* ListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7220EF12798643800EFD05C /* ListViewController.storyboard */; };
 		C7220EF4279864C500EFD05C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7220EF3279864C500EFD05C /* ListViewController.swift */; };
 		C7220EF6279869F800EFD05C /* ListControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7220EF5279869F800EFD05C /* ListControllerBuilder.swift */; };
@@ -71,6 +72,7 @@
 		4D141E28AC6B29DA7AAE2519 /* Pods-CursoiOS-Proyecto2-CursoiOS-Proyecto2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CursoiOS-Proyecto2-CursoiOS-Proyecto2UITests.debug.xcconfig"; path = "Target Support Files/Pods-CursoiOS-Proyecto2-CursoiOS-Proyecto2UITests/Pods-CursoiOS-Proyecto2-CursoiOS-Proyecto2UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9F1F850F7F787864B6B1D723 /* Pods_CursoiOS_Proyecto2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CursoiOS_Proyecto2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67928FE3218011D3AE871BD /* Pods-CursoiOS-Proyecto2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CursoiOS-Proyecto2Tests.release.xcconfig"; path = "Target Support Files/Pods-CursoiOS-Proyecto2Tests/Pods-CursoiOS-Proyecto2Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C70E0BDD27A0631500778CCB /* UserFormContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormContract.swift; sourceTree = "<group>"; };
 		C7220EF12798643800EFD05C /* ListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListViewController.storyboard; sourceTree = "<group>"; };
 		C7220EF3279864C500EFD05C /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		C7220EF5279869F800EFD05C /* ListControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListControllerBuilder.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 			children = (
 				C7B39D2E27A053E00050786A /* UI */,
 				C7B39D3327A054550050786A /* UserFormBuilder.swift */,
+				C70E0BDD27A0631500778CCB /* UserFormContract.swift */,
 			);
 			path = UserForm;
 			sourceTree = "<group>";
@@ -599,6 +602,7 @@
 			files = (
 				D786BD2C27982D07004619AD /* InitialControllerBuilder.swift in Sources */,
 				D786BCEC2798278F004619AD /* AppDelegate.swift in Sources */,
+				C70E0BDE27A0631500778CCB /* UserFormContract.swift in Sources */,
 				C758726E279F1D99006C0A64 /* CatsListInteractor.swift in Sources */,
 				C775713E2799B339000C095D /* FetchCatsUseCase.swift in Sources */,
 				C751FC032799802C007FD77F /* CollectionViewCell.swift in Sources */,
