@@ -16,6 +16,10 @@ class UserFormViewController: UIViewController, UserFormViewContract {
     
     var presenter: UserFormPresenterContract?
     
+    @IBAction func scrollViewTapped(_ sender: Any) {
+        view.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
