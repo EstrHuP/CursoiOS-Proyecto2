@@ -11,7 +11,7 @@ import UIKit
 class InitialControllerBuilder {
     func build() -> UIViewController {
         let tabBarController = UITabBarController()
-        let viewControllers = [buildList(), buildCollection()]
+        let viewControllers = [buildList(), buildCollection(), buildForm()]
         tabBarController.setViewControllers(viewControllers, animated: false)
         
         return tabBarController
@@ -31,6 +31,13 @@ private extension InitialControllerBuilder {
         let collectionNavigation = UITabBarItem(title: "Collection", image: .init(systemName: "calendar"), tag: 1)
         
         return buildNavigation(with: collectionController, tabBarItem: collectionNavigation)
+    }
+    
+    func buildForm() -> UIViewController {
+        let viewController = UserFormBuilder().build()
+        let tabBarItem = UITabBarItem(title: "Form", image: .init(systemName: "person.circle"), tag: 2)
+        
+        return buildNavigation(with: viewController, tabBarItem: tabBarItem)
     }
     
     func buildNavigation(with viewController: UIViewController, tabBarItem: UITabBarItem) -> UINavigationController {
