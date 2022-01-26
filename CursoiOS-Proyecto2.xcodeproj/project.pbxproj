@@ -20,6 +20,8 @@
 		C7220F0427988B0900EFD05C /* CollectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7220F0327988B0900EFD05C /* CollectionViewController.storyboard */; };
 		C7220F0627988B1700EFD05C /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7220F0527988B1700EFD05C /* CollectionViewController.swift */; };
 		C7220F0827988B8C00EFD05C /* CollectionControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7220F0727988B8C00EFD05C /* CollectionControllerBuilder.swift */; };
+		C746EFDD27A1BB5200DBA192 /* CatsToFormWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746EFDC27A1BB5200DBA192 /* CatsToFormWireframe.swift */; };
+		C746EFDF27A1BE5700DBA192 /* CatsToCatsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746EFDE27A1BE5700DBA192 /* CatsToCatsWireframe.swift */; };
 		C751FC032799802C007FD77F /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C751FC022799802C007FD77F /* CollectionViewCell.swift */; };
 		C7587268279EF976006C0A64 /* Pokemons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7587267279EF976006C0A64 /* Pokemons.swift */; };
 		C758726A279F035B006C0A64 /* ListViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7587269279F035B006C0A64 /* ListViewContract.swift */; };
@@ -86,6 +88,8 @@
 		C7220F0327988B0900EFD05C /* CollectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CollectionViewController.storyboard; sourceTree = "<group>"; };
 		C7220F0527988B1700EFD05C /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		C7220F0727988B8C00EFD05C /* CollectionControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionControllerBuilder.swift; sourceTree = "<group>"; };
+		C746EFDC27A1BB5200DBA192 /* CatsToFormWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsToFormWireframe.swift; sourceTree = "<group>"; };
+		C746EFDE27A1BE5700DBA192 /* CatsToCatsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsToCatsWireframe.swift; sourceTree = "<group>"; };
 		C751FC022799802C007FD77F /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		C7587267279EF976006C0A64 /* Pokemons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemons.swift; sourceTree = "<group>"; };
 		C7587269279F035B006C0A64 /* ListViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewContract.swift; sourceTree = "<group>"; };
@@ -213,6 +217,8 @@
 			isa = PBXGroup;
 			children = (
 				C7587273279F215C006C0A64 /* CatsListWireframe.swift */,
+				C746EFDC27A1BB5200DBA192 /* CatsToFormWireframe.swift */,
+				C746EFDE27A1BE5700DBA192 /* CatsToCatsWireframe.swift */,
 			);
 			path = Wireframe;
 			sourceTree = "<group>";
@@ -629,8 +635,10 @@
 				C70E0BE327A06C8A00778CCB /* UserFormModel.swift in Sources */,
 				C70E0BE127A06C3100778CCB /* UserFormPresenter.swift in Sources */,
 				C758726A279F035B006C0A64 /* ListViewContract.swift in Sources */,
+				C746EFDF27A1BE5700DBA192 /* CatsToCatsWireframe.swift in Sources */,
 				C7220F0827988B8C00EFD05C /* CollectionControllerBuilder.swift in Sources */,
 				C77571402799B473000C095D /* Cat.swift in Sources */,
+				C746EFDD27A1BB5200DBA192 /* CatsToFormWireframe.swift in Sources */,
 				D786BCEE2798278F004619AD /* SceneDelegate.swift in Sources */,
 				D786BD2127982A45004619AD /* FetchLandmarksUseCase.swift in Sources */,
 				D786BD2427982A72004619AD /* Landmark.swift in Sources */,

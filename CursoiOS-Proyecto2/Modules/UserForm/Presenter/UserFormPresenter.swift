@@ -8,7 +8,7 @@
 import Foundation
 
 class UserFormPresenter: UserFormPresenterContract {
-    var view: UserFormViewContract?
+    weak var view: UserFormViewContract?
     
     private let fileManager: FileManager
     private let fileName: String
@@ -68,6 +68,11 @@ class UserFormPresenter: UserFormPresenterContract {
         }
         saveUser(userFormModel)
         print("success")
+    }
+    
+    //MARK: Gestion de memoria
+    deinit {
+        print("deinit \(self)")
     }
 }
 

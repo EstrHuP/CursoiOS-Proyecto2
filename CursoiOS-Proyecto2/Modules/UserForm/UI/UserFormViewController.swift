@@ -117,6 +117,11 @@ class UserFormViewController: UIViewController, UserFormViewContract {
     @objc func keyboardWillHide(notification: NSNotification){
         scrollView.contentInset.bottom = 0
     }
+    
+    //MARK: Gestion de memoria
+    deinit {
+        print("deinit \(self)")
+    }
 }
 
 extension UserFormViewController: UITextViewDelegate {

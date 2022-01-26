@@ -19,6 +19,8 @@ class ListControllerBuilder {
         interactor.catsProvider = NetworkCatsListProvider()
         
         let wireframe = CatsListWireframe()
+//        let wireframe = CatsToFormWireframe()
+//        let wireframe = CatsToCatsWireframe()
         
         viewController.presenter = presenter
         presenter.view = viewController

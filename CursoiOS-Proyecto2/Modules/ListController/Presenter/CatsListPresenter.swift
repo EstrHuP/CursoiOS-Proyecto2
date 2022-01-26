@@ -9,7 +9,7 @@ import Foundation
 
 class CatsListPresenter: ListPresenterContract {
     
-    var view: ListViewContract?
+    weak var view: ListViewContract?
     var interactor: ListInteractorContract?
     var wireframe: CatListWireframeContract?
     
@@ -50,6 +50,11 @@ class CatsListPresenter: ListPresenterContract {
     
     private func fetchData() {
         interactor?.fetchItems()
+    }
+    
+    //MARK: Gestion de memoria
+    deinit {
+        print("deinit \(self)")
     }
 }
 

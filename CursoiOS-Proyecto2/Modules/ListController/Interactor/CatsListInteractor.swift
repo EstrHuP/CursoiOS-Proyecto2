@@ -12,7 +12,8 @@ class CatsListInteractor: ListInteractorContract {
     
     private static var favoritesKey = "favorite.cats.array"
     
-    var output: ListInteractorOutputContract?
+    //Output = delegate
+    weak var output: ListInteractorOutputContract?
     var catsProvider: CatsListProviderContract?
     
     private let userDefaults: UserDefaults
@@ -54,5 +55,10 @@ class CatsListInteractor: ListInteractorContract {
     
     func isFavorite(cat: Cat) -> Bool {
         return favorites.contains(cat.id)
+    }
+    
+    //MARK: Gestion de memoria
+    deinit {
+        print("deinit \(self)")
     }
 }

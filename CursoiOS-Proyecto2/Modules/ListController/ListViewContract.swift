@@ -38,7 +38,8 @@ protocol ListInteractorContract {
     func isFavorite(cat: Cat) -> Bool
 }
 
-protocol ListInteractorOutputContract {
+//gestion de memoria. El weak solo se puede usar en clases
+protocol ListInteractorOutputContract: AnyObject {
     func didFetch(cats: [Cat])
     func fetchDidFail()
     func didUpdateFavorites(in cat: Cat, favorite: Bool)
