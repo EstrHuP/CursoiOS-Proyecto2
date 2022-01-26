@@ -7,6 +7,14 @@
 
 import UIKit
 
+struct UserFormViewModel {
+    let name: String?
+    let lastName: String?
+    let phone: String?
+    let mail: String?
+    let bio: String?
+}
+
 class UserFormViewController: UIViewController, UserFormViewContract {
 
     @IBOutlet weak var nameInput: UITextField!
@@ -32,6 +40,18 @@ class UserFormViewController: UIViewController, UserFormViewContract {
         
         [nameInput, lastNameInput, phoneInput, mailInput].forEach { input in
             input?.delegate = self
+        }
+        
+        presenter?.didLoad()
+    }
+    
+    func configure(with viewModel: UserFormViewModel) {
+        DispatchQueue.main.async {
+            self.nameInput.text = viewModel.name
+            self.lastNameInput.text = viewModel.lastName
+            self.phoneInput.text = viewModel.phone
+            self.mailInput.text = viewModel.mail
+            self.userBioTextArea.text = viewModel.bio
         }
     }
     

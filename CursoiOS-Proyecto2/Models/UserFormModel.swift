@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UserFormModel {
+struct UserFormModel: Codable {
     var name: String?
     var lastName: String?
     var phone: String?

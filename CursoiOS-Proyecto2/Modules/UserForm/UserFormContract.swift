@@ -11,6 +11,8 @@ import UIKit
 protocol UserFormViewContract: UIViewController {
     var presenter: UserFormPresenterContract? {get set}
     
+    func configure(with viewModel: UserFormViewModel)
+    
     func didValidateName(_ valid: Bool)
     func didValidateLastName(_ valid: Bool)
     func didValidatePhone(_ valid: Bool)
@@ -21,6 +23,8 @@ protocol UserFormViewContract: UIViewController {
 
 protocol UserFormPresenterContract {
     var view: UserFormViewContract? {get set}
+    
+    func didLoad()
     
     func didUpdateName(_ name: String?)
     func didUpdateLastName(_ lasName: String?)
