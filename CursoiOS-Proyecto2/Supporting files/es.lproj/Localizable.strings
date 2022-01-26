@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  CursoiOS-Proyecto2
+
+  Created by Esther Huecas on 26/1/22.
+  
+*/
+
+"user_form_name_label" = "Nombre";
+"user_form_last_name_label" = "Apellidos";
+

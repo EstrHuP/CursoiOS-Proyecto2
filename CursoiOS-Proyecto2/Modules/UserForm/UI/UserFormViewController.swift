@@ -17,6 +17,16 @@ struct UserFormViewModel {
 
 class UserFormViewController: UIViewController, UserFormViewContract {
 
+    @IBOutlet weak var nameLabel: UILabel! {
+        didSet {
+            nameLabel.text = "user_form_name_label".localized
+        }
+    }
+    @IBOutlet weak var lastNameLabel: UILabel! {
+        didSet {
+            lastNameLabel.text = "user_form_last_name_label".localized
+        }
+    }
     @IBOutlet weak var nameInput: UITextField!
     @IBOutlet weak var lastNameInput: UITextField!
     @IBOutlet weak var phoneInput: UITextField!
@@ -67,10 +77,6 @@ class UserFormViewController: UIViewController, UserFormViewContract {
             self.mailInput.text = viewModel.mail
             self.userBioTextArea.text = viewModel.bio
         }
-    }
-    
-    static func createFromStoryboard() -> UserFormViewController {
-        return UIStoryboard(name: "UserFormViewController", bundle: .main).instantiateViewController(withIdentifier: "UserFormViewController") as! UserFormViewController
     }
     
     func didValidateName(_ valid: Bool) {

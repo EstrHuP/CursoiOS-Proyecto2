@@ -210,8 +210,10 @@
                     </view>
                     <connections>
                         <outlet property="lastNameInput" destination="DVh-Mi-Pu3" id="ybr-cZ-PC3"/>
+                        <outlet property="lastNameLabel" destination="F2K-t1-JYz" id="Occ-28-A4Z"/>
                         <outlet property="mailInput" destination="42U-hq-7nA" id="NCo-7T-qwm"/>
                         <outlet property="nameInput" destination="F1u-Vn-TUO" id="kPS-V7-CMy"/>
+                        <outlet property="nameLabel" destination="bXG-8I-SVK" id="J8L-Hn-w9Q"/>
                         <outlet property="phoneInput" destination="ocD-IW-4vI" id="dfY-Mg-hmv"/>
                         <outlet property="scrollView" destination="oJ3-UQ-UVj" id="Ome-Vn-lSr"/>
                         <outlet property="userBioTextArea" destination="Dfj-tN-Tn5" id="gRY-3p-Zqp"/>

@@ -22,6 +22,9 @@
 		C7220F0827988B8C00EFD05C /* CollectionControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7220F0727988B8C00EFD05C /* CollectionControllerBuilder.swift */; };
 		C746EFDD27A1BB5200DBA192 /* CatsToFormWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746EFDC27A1BB5200DBA192 /* CatsToFormWireframe.swift */; };
 		C746EFDF27A1BE5700DBA192 /* CatsToCatsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746EFDE27A1BE5700DBA192 /* CatsToCatsWireframe.swift */; };
+		C746EFE227A1C3DB00DBA192 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C746EFE427A1C3DB00DBA192 /* Localizable.strings */; };
+		C746EFE827A1C84500DBA192 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746EFE727A1C84500DBA192 /* StringExtensions.swift */; };
+		C746EFEA27A1C8FB00DBA192 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746EFE927A1C8FB00DBA192 /* UIViewControllerExtensions.swift */; };
 		C751FC032799802C007FD77F /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C751FC022799802C007FD77F /* CollectionViewCell.swift */; };
 		C7587268279EF976006C0A64 /* Pokemons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7587267279EF976006C0A64 /* Pokemons.swift */; };
 		C758726A279F035B006C0A64 /* ListViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7587269279F035B006C0A64 /* ListViewContract.swift */; };
@@ -90,6 +93,10 @@
 		C7220F0727988B8C00EFD05C /* CollectionControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionControllerBuilder.swift; sourceTree = "<group>"; };
 		C746EFDC27A1BB5200DBA192 /* CatsToFormWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsToFormWireframe.swift; sourceTree = "<group>"; };
 		C746EFDE27A1BE5700DBA192 /* CatsToCatsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsToCatsWireframe.swift; sourceTree = "<group>"; };
+		C746EFE327A1C3DB00DBA192 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C746EFE527A1C44E00DBA192 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C746EFE727A1C84500DBA192 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		C746EFE927A1C8FB00DBA192 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		C751FC022799802C007FD77F /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		C7587267279EF976006C0A64 /* Pokemons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemons.swift; sourceTree = "<group>"; };
 		C7587269279F035B006C0A64 /* ListViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewContract.swift; sourceTree = "<group>"; };
@@ -203,6 +210,15 @@
 			path = Collection;
 			sourceTree = "<group>";
 		};
+		C746EFE627A1C82500DBA192 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C746EFE727A1C84500DBA192 /* StringExtensions.swift */,
+				C746EFE927A1C8FB00DBA192 /* UIViewControllerExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C758726F279F1FCA006C0A64 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +308,7 @@
 		D786BCEA2798278F004619AD /* CursoiOS-Proyecto2 */ = {
 			isa = PBXGroup;
 			children = (
+				C746EFE627A1C82500DBA192 /* Extensions */,
 				C7B39D2A27A04ABF0050786A /* Providers */,
 				D786BD1B2798285A004619AD /* Modules */,
 				D786BD1F27982A32004619AD /* UseCases */,
@@ -360,6 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				D786BD2827982B7E004619AD /* landmarkData.json */,
+				C746EFE427A1C3DB00DBA192 /* Localizable.strings */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -468,6 +486,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = D786BCDF2798278F004619AD;
 			productRefGroup = D786BCE92798278F004619AD /* Products */;
@@ -490,6 +509,7 @@
 				D786BCF827982793004619AD /* LaunchScreen.storyboard in Resources */,
 				D786BCF527982793004619AD /* Assets.xcassets in Resources */,
 				C7220EFF279874D000EFD05C /* DetailViewController.xib in Resources */,
+				C746EFE227A1C3DB00DBA192 /* Localizable.strings in Resources */,
 				C7220F0427988B0900EFD05C /* CollectionViewController.storyboard in Resources */,
 				D786BD2927982B7E004619AD /* landmarkData.json in Resources */,
 				C7220EF22798643800EFD05C /* ListViewController.storyboard in Resources */,
@@ -634,6 +654,7 @@
 				C7220F0627988B1700EFD05C /* CollectionViewController.swift in Sources */,
 				C70E0BE327A06C8A00778CCB /* UserFormModel.swift in Sources */,
 				C70E0BE127A06C3100778CCB /* UserFormPresenter.swift in Sources */,
+				C746EFE827A1C84500DBA192 /* StringExtensions.swift in Sources */,
 				C758726A279F035B006C0A64 /* ListViewContract.swift in Sources */,
 				C746EFDF27A1BE5700DBA192 /* CatsToCatsWireframe.swift in Sources */,
 				C7220F0827988B8C00EFD05C /* CollectionControllerBuilder.swift in Sources */,
@@ -641,6 +662,7 @@
 				C746EFDD27A1BB5200DBA192 /* CatsToFormWireframe.swift in Sources */,
 				D786BCEE2798278F004619AD /* SceneDelegate.swift in Sources */,
 				D786BD2127982A45004619AD /* FetchLandmarksUseCase.swift in Sources */,
+				C746EFEA27A1C8FB00DBA192 /* UIViewControllerExtensions.swift in Sources */,
 				D786BD2427982A72004619AD /* Landmark.swift in Sources */,
 				C7220EFE279874D000EFD05C /* DetailViewController.swift in Sources */,
 				C7B39D2C27A04ADB0050786A /* CatsListProvider.swift in Sources */,
@@ -685,6 +707,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		C746EFE427A1C3DB00DBA192 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C746EFE327A1C3DB00DBA192 /* en */,
+				C746EFE527A1C44E00DBA192 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		D786BCF627982793004619AD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -700,6 +731,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -761,6 +793,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

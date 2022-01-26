@@ -35,10 +35,6 @@ class CollectionViewController: UIViewController {
 
 extension CollectionViewController {
     
-    static func createFromStoryboard() -> CollectionViewController {
-        return UIStoryboard(name: "CollectionViewController", bundle: .main).instantiateViewController(withIdentifier: "CollectionViewController") as! CollectionViewController
-    }
-    
     private var layout: UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 10

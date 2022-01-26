@@ -15,11 +15,6 @@ class ListViewController: UIViewController, ListViewContract {
     
     @IBOutlet weak var tableView: UITableView!
     
-    
-    static func createFromStoryboard() -> ListViewController {
-        return UIStoryboard(name: "ListViewController", bundle: .main).instantiateViewController(withIdentifier: "ListViewController") as! ListViewController
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self

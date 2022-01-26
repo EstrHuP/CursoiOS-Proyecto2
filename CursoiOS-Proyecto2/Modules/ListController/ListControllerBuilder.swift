@@ -12,6 +12,7 @@ class ListControllerBuilder {
     
     func build() -> UIViewController {
         let viewController = ListViewController.createFromStoryboard()
+        viewController.navigationController?.title = "Cats list"
         
         //VIPER
         let presenter = CatsListPresenter()
