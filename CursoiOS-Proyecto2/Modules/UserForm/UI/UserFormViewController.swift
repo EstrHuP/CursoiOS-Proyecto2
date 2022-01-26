@@ -34,6 +34,10 @@ class UserFormViewController: UIViewController, UserFormViewContract {
         presenter?.didPressEnd()
     }
     
+    @IBAction func inputDidChange(_ textField: UITextField) {
+        textFieldDidChange(textField)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         userBioTextArea.delegate = self
@@ -43,6 +47,16 @@ class UserFormViewController: UIViewController, UserFormViewContract {
         }
         
         presenter?.didLoad()
+    }
+    
+    func textFieldDidChange(_ textField: UITextField) {
+        switch textField {
+        case nameInput: presenter?.didUpdateName(textField.text)
+        case lastNameInput: presenter?.didUpdateLastName(textField.text)
+        case phoneInput: presenter?.didUpdatePhone(textField.text)
+        case mailInput: presenter?.didUpdateMail(textField.text)
+        default: break
+        }
     }
     
     func configure(with viewModel: UserFormViewModel) {
@@ -113,13 +127,7 @@ extension UserFormViewController: UITextViewDelegate {
 
 extension UserFormViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        switch textField {
-        case nameInput: presenter?.didUpdateName(textField.text)
-        case lastNameInput: presenter?.didUpdateLastName(textField.text)
-        case phoneInput: presenter?.didUpdatePhone(textField.text)
-        case mailInput: presenter?.didUpdateMail(textField.text)
-        default: break
-        }
+        textFieldDidChange(textField)
     }
     
     //return button in keyboard
