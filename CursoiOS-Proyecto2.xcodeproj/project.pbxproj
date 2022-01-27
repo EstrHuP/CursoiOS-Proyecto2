@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		12A4C4FFD132FAA646E335F4 /* Pods_CursoiOS_Proyecto2_CursoiOS_Proyecto2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BA01EFD8688A3BEE4C8AF99 /* Pods_CursoiOS_Proyecto2_CursoiOS_Proyecto2UITests.framework */; };
+		C70A351127A2EE1B00118998 /* PermissionsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70A351027A2EE1B00118998 /* PermissionsViewController.storyboard */; };
+		C70A351327A2EE2C00118998 /* PermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70A351227A2EE2C00118998 /* PermissionsViewController.swift */; };
 		C70E0BDE27A0631500778CCB /* UserFormContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70E0BDD27A0631500778CCB /* UserFormContract.swift */; };
 		C70E0BE127A06C3100778CCB /* UserFormPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70E0BE027A06C3100778CCB /* UserFormPresenter.swift */; };
 		C70E0BE327A06C8A00778CCB /* UserFormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70E0BE227A06C8A00778CCB /* UserFormModel.swift */; };
@@ -35,6 +37,9 @@
 		C775713E2799B339000C095D /* FetchCatsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C775713D2799B339000C095D /* FetchCatsUseCase.swift */; };
 		C77571402799B473000C095D /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C775713F2799B473000C095D /* Cat.swift */; };
 		C777DEB02799D6EF000F61D6 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C777DEAF2799D6EF000F61D6 /* ListTableViewCell.swift */; };
+		C7A105E427A2EF3400A5DEDE /* PermissionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A105E327A2EF3400A5DEDE /* PermissionsPresenter.swift */; };
+		C7A105E627A2F52400A5DEDE /* LocationPermissionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A105E527A2F52400A5DEDE /* LocationPermissionInteractor.swift */; };
+		C7A105E827A2F8E200A5DEDE /* PermissionsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A105E727A2F8E200A5DEDE /* PermissionsBuilder.swift */; };
 		C7B39D2C27A04ADB0050786A /* CatsListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B39D2B27A04ADB0050786A /* CatsListProvider.swift */; };
 		C7B39D3027A053F20050786A /* UserFormViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7B39D2F27A053F20050786A /* UserFormViewController.storyboard */; };
 		C7B39D3227A054000050786A /* UserFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B39D3127A054000050786A /* UserFormViewController.swift */; };
@@ -80,6 +85,8 @@
 		4D141E28AC6B29DA7AAE2519 /* Pods-CursoiOS-Proyecto2-CursoiOS-Proyecto2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CursoiOS-Proyecto2-CursoiOS-Proyecto2UITests.debug.xcconfig"; path = "Target Support Files/Pods-CursoiOS-Proyecto2-CursoiOS-Proyecto2UITests/Pods-CursoiOS-Proyecto2-CursoiOS-Proyecto2UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9F1F850F7F787864B6B1D723 /* Pods_CursoiOS_Proyecto2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CursoiOS_Proyecto2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67928FE3218011D3AE871BD /* Pods-CursoiOS-Proyecto2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CursoiOS-Proyecto2Tests.release.xcconfig"; path = "Target Support Files/Pods-CursoiOS-Proyecto2Tests/Pods-CursoiOS-Proyecto2Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C70A351027A2EE1B00118998 /* PermissionsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PermissionsViewController.storyboard; sourceTree = "<group>"; };
+		C70A351227A2EE2C00118998 /* PermissionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsViewController.swift; sourceTree = "<group>"; };
 		C70E0BDD27A0631500778CCB /* UserFormContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormContract.swift; sourceTree = "<group>"; };
 		C70E0BE027A06C3100778CCB /* UserFormPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormPresenter.swift; sourceTree = "<group>"; };
 		C70E0BE227A06C8A00778CCB /* UserFormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormModel.swift; sourceTree = "<group>"; };
@@ -109,6 +116,9 @@
 		C775713F2799B473000C095D /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		C777DEAF2799D6EF000F61D6 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		C79A40F49E1EA3CB3D413E16 /* Pods-CursoiOS-Proyecto2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CursoiOS-Proyecto2.debug.xcconfig"; path = "Target Support Files/Pods-CursoiOS-Proyecto2/Pods-CursoiOS-Proyecto2.debug.xcconfig"; sourceTree = "<group>"; };
+		C7A105E327A2EF3400A5DEDE /* PermissionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsPresenter.swift; sourceTree = "<group>"; };
+		C7A105E527A2F52400A5DEDE /* LocationPermissionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionInteractor.swift; sourceTree = "<group>"; };
+		C7A105E727A2F8E200A5DEDE /* PermissionsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsBuilder.swift; sourceTree = "<group>"; };
 		C7B39D2B27A04ADB0050786A /* CatsListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsListProvider.swift; sourceTree = "<group>"; };
 		C7B39D2F27A053F20050786A /* UserFormViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserFormViewController.storyboard; sourceTree = "<group>"; };
 		C7B39D3127A054000050786A /* UserFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +178,18 @@
 				9F1F850F7F787864B6B1D723 /* Pods_CursoiOS_Proyecto2Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C70A350F27A2EDC000118998 /* Permissions */ = {
+			isa = PBXGroup;
+			children = (
+				C70A351027A2EE1B00118998 /* PermissionsViewController.storyboard */,
+				C70A351227A2EE2C00118998 /* PermissionsViewController.swift */,
+				C7A105E327A2EF3400A5DEDE /* PermissionsPresenter.swift */,
+				C7A105E527A2F52400A5DEDE /* LocationPermissionInteractor.swift */,
+				C7A105E727A2F8E200A5DEDE /* PermissionsBuilder.swift */,
+			);
+			path = Permissions;
 			sourceTree = "<group>";
 		};
 		C70E0BDF27A06C1F00778CCB /* Presenter */ = {
@@ -347,6 +369,7 @@
 		D786BD1B2798285A004619AD /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C70A350F27A2EDC000118998 /* Permissions */,
 				C7B39D2D27A053D60050786A /* UserForm */,
 				C7220F0227988AFA00EFD05C /* Collection */,
 				C7220EF72798748100EFD05C /* DetailController */,
@@ -513,6 +536,7 @@
 				D786BCF527982793004619AD /* Assets.xcassets in Resources */,
 				C7220EFF279874D000EFD05C /* DetailViewController.xib in Resources */,
 				C746EFE227A1C3DB00DBA192 /* Localizable.strings in Resources */,
+				C70A351127A2EE1B00118998 /* PermissionsViewController.storyboard in Resources */,
 				C7220F0427988B0900EFD05C /* CollectionViewController.storyboard in Resources */,
 				D786BD2927982B7E004619AD /* landmarkData.json in Resources */,
 				C7220EF22798643800EFD05C /* ListViewController.storyboard in Resources */,
@@ -655,7 +679,9 @@
 				C7B39D3227A054000050786A /* UserFormViewController.swift in Sources */,
 				C7220EF4279864C500EFD05C /* ListViewController.swift in Sources */,
 				C7220F0627988B1700EFD05C /* CollectionViewController.swift in Sources */,
+				C7A105E627A2F52400A5DEDE /* LocationPermissionInteractor.swift in Sources */,
 				C70E0BE327A06C8A00778CCB /* UserFormModel.swift in Sources */,
+				C7A105E827A2F8E200A5DEDE /* PermissionsBuilder.swift in Sources */,
 				C70E0BE127A06C3100778CCB /* UserFormPresenter.swift in Sources */,
 				C746EFE827A1C84500DBA192 /* StringExtensions.swift in Sources */,
 				C758726A279F035B006C0A64 /* ListViewContract.swift in Sources */,
@@ -664,11 +690,13 @@
 				C77571402799B473000C095D /* Cat.swift in Sources */,
 				C746EFEC27A1CB6800DBA192 /* FavoritesProvider.swift in Sources */,
 				C746EFDD27A1BB5200DBA192 /* CatsToFormWireframe.swift in Sources */,
+				C70A351327A2EE2C00118998 /* PermissionsViewController.swift in Sources */,
 				D786BCEE2798278F004619AD /* SceneDelegate.swift in Sources */,
 				D786BD2127982A45004619AD /* FetchLandmarksUseCase.swift in Sources */,
 				C746EFEA27A1C8FB00DBA192 /* UIViewControllerExtensions.swift in Sources */,
 				D786BD2427982A72004619AD /* Landmark.swift in Sources */,
 				C7220EFE279874D000EFD05C /* DetailViewController.swift in Sources */,
+				C7A105E427A2EF3400A5DEDE /* PermissionsPresenter.swift in Sources */,
 				C7B39D2C27A04ADB0050786A /* CatsListProvider.swift in Sources */,
 				C758726C279F049E006C0A64 /* CatsListPresenter.swift in Sources */,
 				C7220F01279875F600EFD05C /* DetailControllerBuilder.swift in Sources */,

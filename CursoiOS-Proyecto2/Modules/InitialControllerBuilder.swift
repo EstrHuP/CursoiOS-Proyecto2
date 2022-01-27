@@ -11,7 +11,7 @@ import UIKit
 class InitialControllerBuilder {
     func build() -> UIViewController {
         let tabBarController = UITabBarController()
-        let viewControllers = [buildList(), buildCollection(), buildForm()]
+        let viewControllers = [buildList(), buildCollection(), buildForm(), PermissionsBuilder().buildForTabBar(tag: 3)]
         tabBarController.setViewControllers(viewControllers, animated: false)
         
         return tabBarController
