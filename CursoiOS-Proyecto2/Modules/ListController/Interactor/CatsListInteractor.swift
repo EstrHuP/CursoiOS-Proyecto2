@@ -6,33 +6,14 @@
 //
 
 import Foundation
-import Alamofire
 
 class CatsListInteractor: ListInteractorContract {
     
-    private static var favoritesKey = "favorite.cats.array"
-    
     //Output = delegate
     weak var output: ListInteractorOutputContract?
+    
     var catsProvider: CatsListProviderContract?
-    
-    private let userDefaults: UserDefaults
-    
-    //MARK: PERSISTENCIA DE DATOS
-    init(userDefaults: UserDefaults = UserDefaults.standard) {
-        self.userDefaults = userDefaults
-    }
-    
-    private var favorites: [String] {
-        //obtener
-        get {
-            userDefaults.stringArray(forKey: CatsListInteractor.favoritesKey) ?? []
-        }
-        //guardar
-        set {
-            userDefaults.setValue(newValue, forKey: CatsListInteractor.favoritesKey)
-        }
-    }
+    var favoritesProvider: FavoritesProvider?
     
     func fetchItems() {
         catsProvider?.getCatsList({ result in
@@ -44,17 +25,16 @@ class CatsListInteractor: ListInteractorContract {
     }
     
     func didPressFavorite(in cat: Cat) {
-        if !favorites.contains(cat.id) {
-            favorites.append(cat.id)
-            output?.didUpdateFavorites(in: cat, favorite: true)
-        } else if let index = favorites.firstIndex(of: cat.id) {
-            favorites.remove(at: index)
-            output?.didUpdateFavorites(in: cat, favorite: false)
-        }
+        favoritesProvider?.didUpdateFavorite(id: cat.id, { result in
+            switch result {
+            case .success(let favorite): self.output?.didUpdateFavorites(in: cat, favorite: favorite)
+            case .failure: break
+            }
+        })
     }
     
     func isFavorite(cat: Cat) -> Bool {
-        return favorites.contains(cat.id)
+        return favoritesProvider?.isFavorite(id: cat.id) ?? false
     }
     
     //MARK: Gestion de memoria

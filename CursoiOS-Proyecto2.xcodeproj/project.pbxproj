@@ -25,6 +25,7 @@
 		C746EFE227A1C3DB00DBA192 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C746EFE427A1C3DB00DBA192 /* Localizable.strings */; };
 		C746EFE827A1C84500DBA192 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746EFE727A1C84500DBA192 /* StringExtensions.swift */; };
 		C746EFEA27A1C8FB00DBA192 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746EFE927A1C8FB00DBA192 /* UIViewControllerExtensions.swift */; };
+		C746EFEC27A1CB6800DBA192 /* FavoritesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746EFEB27A1CB6800DBA192 /* FavoritesProvider.swift */; };
 		C751FC032799802C007FD77F /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C751FC022799802C007FD77F /* CollectionViewCell.swift */; };
 		C7587268279EF976006C0A64 /* Pokemons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7587267279EF976006C0A64 /* Pokemons.swift */; };
 		C758726A279F035B006C0A64 /* ListViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7587269279F035B006C0A64 /* ListViewContract.swift */; };
@@ -97,6 +98,7 @@
 		C746EFE527A1C44E00DBA192 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C746EFE727A1C84500DBA192 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		C746EFE927A1C8FB00DBA192 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		C746EFEB27A1CB6800DBA192 /* FavoritesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesProvider.swift; sourceTree = "<group>"; };
 		C751FC022799802C007FD77F /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		C7587267279EF976006C0A64 /* Pokemons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemons.swift; sourceTree = "<group>"; };
 		C7587269279F035B006C0A64 /* ListViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewContract.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				C7B39D2B27A04ADB0050786A /* CatsListProvider.swift */,
+				C746EFEB27A1CB6800DBA192 /* FavoritesProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -659,6 +662,7 @@
 				C746EFDF27A1BE5700DBA192 /* CatsToCatsWireframe.swift in Sources */,
 				C7220F0827988B8C00EFD05C /* CollectionControllerBuilder.swift in Sources */,
 				C77571402799B473000C095D /* Cat.swift in Sources */,
+				C746EFEC27A1CB6800DBA192 /* FavoritesProvider.swift in Sources */,
 				C746EFDD27A1BB5200DBA192 /* CatsToFormWireframe.swift in Sources */,
 				D786BCEE2798278F004619AD /* SceneDelegate.swift in Sources */,
 				D786BD2127982A45004619AD /* FetchLandmarksUseCase.swift in Sources */,

@@ -18,6 +18,7 @@ class ListControllerBuilder {
         let presenter = CatsListPresenter()
         let interactor = CatsListInteractor()
         interactor.catsProvider = NetworkCatsListProvider()
+        interactor.favoritesProvider = UserDefaultsFavoritesProvider()
         
         let wireframe = CatsListWireframe()
 //        let wireframe = CatsToFormWireframe()
